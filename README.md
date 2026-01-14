@@ -82,15 +82,28 @@ Once connected, enable the app in a conversation and prompt normally (for exampl
 ---
 
 ### Claude MCP Configuration (Anthropic)
+Claude Desktop & Claude Code
 
+Claude runs MCP servers locally and does not yet support direct remote MCP URLs.
+To connect Claude to send247, we use the official MCP remote bridge (@modelcontextprotocol/remote), which proxies the remote MCP server over stdio.
+
+1. Install MCP Remote:
+   npm install -g @modelcontextprotocol/remote
+
+2. Add the following to your MCP config:
 ```json
 {
   "mcpServers": {
     "send247-delivery": {
-      "url": "https://mcp.send247.uk/api/v1/mcp"
+      "command": "npx",
+      "args": [
+        "@modelcontextprotocol/remote",
+        "https://mcp.send247.uk/api/v1/mcp"
+      ]
     }
   }
 }
+
 ```
 
 Claude will automatically discover available tools via `tools/list`.
