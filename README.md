@@ -1,6 +1,6 @@
-# ClickDrop Delivery MCP Server
+# Send247 Delivery MCP Server
 
-The ClickDrop Delivery(Send247) MCP is a **Model Context Protocol (MCP) server** that allows AI assistants to **quote and book UK deliveries** through a structured, safe, and auditable interface.
+The Send247 Delivery MCP is a **Model Context Protocol (MCP) server** that allows AI assistants to **quote and book UK deliveries** through a structured, safe, and auditable interface.
 
 It is designed for **ChatGPT, Claude, GitHub Copilot, and other MCP-compatible clients**.
 
